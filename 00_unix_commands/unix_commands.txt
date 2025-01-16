@@ -1,0 +1,17 @@
+mkdir 
+
+cd <directory_name> ("Change Directory"). Changes the current director to the specified one.
+
+
+
+code <file_name>. Creates a file and opens it in a text editor.
+
+ls ("list"). Shows the content of the current directory.
+
+pwd ("print working directory"). Shows the path of the current directory.
+
+clear - clears the terminal window.
+
+gcc <file_name (c source code)> - compile the program.
+
+./<executable_file> - runs the prrogram. Ex: ./a.out - runs the program file "a.out"
