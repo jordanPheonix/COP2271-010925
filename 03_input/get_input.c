@@ -1,5 +1,5 @@
 /*
-
+    User Input
 */
 
 #include <stdio.h>
@@ -11,10 +11,10 @@ int main(void){
     int square_area;
 
     //Write the prompt
-    puts("Enter the side of a square.");
+    puts("Enter the side of a square."); //Equivelent to doing printf with \n
 
     //get the input
-    scanf("%d", &square_side); //sanf("<conversion specifier(s)>", &<var_name>) || & - address modifier (looks for input from user keyboard)
+    scanf("%d", &square_side); //sanf("<conversion specifier(s)>", &<var_name>) || & - address modifier (looks for input from user keyboard, writes it onto variable)
 
     //Do the math
     square_perimeter = square_side * 4;
