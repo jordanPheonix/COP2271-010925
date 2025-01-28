@@ -25,7 +25,7 @@ int main(void){
 
     weather(45);
 
-    printf("%.4f\n", milesToKms(5)); //%<decimal places>f allows for printf to print a double
+    printf("%.4f\n", milesToKms(5)); //%<decimal places (optional)>f allows for printf to print a double
 
     return 0;
 }
