@@ -11,6 +11,7 @@
 //function prototypes
 
 double avgStudentGradesSentinel(void);
+double getGrade(void);
 
 #include <stdio.h>
 
@@ -28,10 +29,9 @@ double avgStudentGradesSentinel(void) {
 
     while(grade != -1) { //-1 is a sentinel value, because the loop will infinitely repeat until the condition is met
         //Get the grade
-        printf("Enter the grade (-1 to exit): ");
-        scanf("%lf", &grade);
+        grade = getGrade();
 
-        if (grade != -1) { //prevents -1 from being counted as an entered grade
+        if (grade >= 0) { //prevents -1 (or any non-positive number) from being counted as an entered grade
             total_grade += grade;
             ++num_grades;
         }
@@ -42,4 +42,23 @@ double avgStudentGradesSentinel(void) {
     }
     
     return total_grade/num_grades;
+}
+
+double getGrade(void){
+    double grade;
+
+    do {
+        printf("Enter the grade (-1 to exit): ");
+        scanf("%lf", &grade);
+        if (grade < -1 || grade > 100) {
+            puts("INCORRECT GRADE! Try again.");
+        }
+    } while(grade < -1 || grade > 100);
+
+    /*
+        A while loop tests the condition before deciding to run the code/continue looping
+        A do-while loop runs the code, then checks the condition before deciding to continue/start looping (will run at least once)
+    */
+
+    return grade;
 }
